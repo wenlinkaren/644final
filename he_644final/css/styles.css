@@ -1,0 +1,54 @@
+nav ul li a {
+    background: #fee7c9;
+    color: #b61625;
+}
+nav ul li a:hover {
+    background: #ba663d !important;
+    color: #e5e5e5;
+}
+button {
+    background: #b61625;
+    color: #e5e5e5;
+}
+.header h3 {
+    color: #b61625 !important;
+}
+h4 {
+    padding-top: 1.5rem;
+}
+#expirationMonth, #expirationYear {
+    width: 45%;
+    float: left;
+    margin-right: 20px;
+}
+.marketing {
+    background: #fee7c9;
+    padding-bottom: 10px;
+}
+footer p {
+    color: #e5e5e5; 
+    margin-top: 120px;
+}
+span {
+    color:#b61625;
+}
+label[for="handTossed"], 
+label[for="thinCrust"], 
+label[for="newYorkStyle"], 
+label[for="glutenFree"] {
+    font-weight: 500;
+}
+h5 {
+    font-weight: 700;
+}
+#orderSummary, #orderSummaryB {
+    color:#b61625;
+    border-radius: 3px;
+    padding: 20px 0 0 2px;
+    line-height: 2.5rem;
+}
+#total, #totalB {
+    font-weight: 700;
+    font-size: 1.3em;
+    padding: 50px 0;
+}

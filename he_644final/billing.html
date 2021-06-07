@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Information</title>
+
+     <!-- Bootstrap CSS -->
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+     <link href="css/styles.css" rel="stylesheet">
+ 
+</head>
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+              <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="index.html">Order</a></li>
+                <li role="presentation" class="active"><a href="billing.html">Billing</a></li>
+              </ul>
+            </nav>
+            <h3>Wenlin's Pizza</h3>
+          </div>
+    <div class="row marketing">
+        <div class="col-lg-8">
+          <h3>Billing Information</h3>
+      
+            <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="autoFill" name="autoFill">
+                  Same as delivery information
+                </label>
+              </div>
+
+            <form id="billingInfor" action="" method="post">
+                <div class="form-group">
+                    <label for="fullNameB">Name</label><br>
+                    <input type="text" name="fullNameB" id="fullNameB" class="form-control">
+                    <span></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="streetAddressB">Street Address</label><br>
+                    <input type="text" name="streetAddressB" id="streetAddressB" class="form-control">
+                    <span></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="apartmentNumberB">Apartment Number (optional)</label><br>
+                    <input type="text" name="apartmentNumberB" id="apartmentNumberB" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="roomNumberB">Suit or Room Number (optional)</label><br>
+                    <input type="text" name="roomNumberB" id="roomNumberB" class="form-control">
+                </div>
+            
+                <div class="form-group">
+                    <label for="cityB">City</label><br>
+                    <input type="text" name="cityB" id="cityB" class="form-control">
+                    <span></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="stateB">State (eg: CA)</label><br>
+                    <input type="text" name="stateB" id="stateB" class="form-control">
+                    <span></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="zipCodeB">Zip Code (eg: 12345 or 12345-1234)</label><br>
+                    <input type="text" name="zipCodeB" id="zipCodeB" class="form-control">
+                    <span></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="cardNumber">Credit Card Number (only Visa, Master or Amex)</label><br>
+                    <input type="text" name="cardNumber" id="cardNumber" class="form-control">
+                    <span></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvcCode">CVC Code</label><br>
+                    <input type="number" name="cvcCode" id="cvcCode" class="form-control">
+                    <span></span>
+                </div>
+                <div class="form-group">
+                    <label for="cvcCode" >Expiration Date</label><br>
+                    <select name="expirationMonth" id="expirationMonth" class="form-control">
+                        <option value="">Select Month</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select name="expirationYear" id="expirationYear" class="form-control">
+                        <option value="">Select Year</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                      </select>
+                      <span></span>
+                </div>
+                <button type="submit" class="btn btn-lg" style="margin-top: 20px">Place your order</button>
+        </div>
+
+        <div class="col-lg-4">
+          <h3>Order Summary:</h3>
+          <div id="orderSummaryB">
+            <div id="doughOrderB"></div>
+            <div id="sizeOrderB"></div>
+            <div id="cheeseOrderB"></div>
+            <div id="sauceOrderB"></div>
+            <div id="toppingsOrderB"></div>
+          </div>
+          <dix id="totalB"></div>
+        
+        </div>
+      </div>
+
+    </form>
+
+      <footer class="footer" style="background: url('img/pizzaOven.jpeg') center no-repeat; height: 270px; text-align: center;">
+        <p style="color: #e5e5e5; margin-top: 120px;">&copy; 2021 Company, Inc.</p>
+      </footer>
+   
+    </div> 
+    
+    <script src="js/billing.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>644final_Pizza Order Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="index.html">Order</a></li>
+            <li role="presentation"><a href="billing.html">Billing</a></li>
+          </ul>
+        </nav>
+        <h3>Wenlin's Pizza</h3>
+      </div>
+
+      <div class="jumbotron" style="background:url('img/pizza.gif') center no-repeat; height: 320px;">
+      </div>
+
+      <div class="row marketing">
+        <form id="deliveryInfor" action="" method="post">
+        <div class="col-lg-8">
+          <h3>Delivery Information</h3>
+
+            <div class="form-group">
+            <label for="fullName">Name</label><br>
+              <input type="text" name="fullName" id="fullName" class="form-control" autofocus>
+              <span></span>
+            </div>
+
+            <div class="form-group">
+            <label for="address">Address Type</label><br>
+              <select name="address" class="form-control" onchange="CheckAddressType(this.value)">
+                <option value="House">House</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Business">Business</option>
+                <option value="Campus">Campus</option>
+                <option value="Hotel">Hotel</option>
+                <option value="Dorm">Dorm</option>
+                <option value="Other">Others</option>
+              </select><br>
+              <span></span>
+              <textarea name="address" id="address" style="display: none;"></textarea>
+            </div>
+
+            <div class="form-group">
+            <label for="streetAddress">Street Address</label><br>
+              <input type="text" name= "streetAddress" id="streetAddress" class="form-control">
+              <span></span>
+            </div>
+
+            <div class="form-group">
+            <label for="apartmentNumber">Apartment Number (optional)</label><br>
+              <input type="text" name="apartmentNumber" id="apartmentNumber" class="form-control">
+            </div>
+
+            <div class="form-group">
+            <label for="roomNumber">Suit or Room Number (optional)</label><br>
+              <input type="text" name="roomNumber" id="roomNumber" class="form-control">
+            </div>
+          
+            <div class="form-group">
+            <label for="city">City</label><br>
+              <input type="text" name="city" id="city" class="form-control">
+              <span></span>
+            </div>
+
+            <div class="form-group">
+            <label for="state">State (eg: CA)</label><br>
+              <input type="text" name="state" id="state" class="form-control">
+              <span></span>
+            </div>
+
+            <div class="form-group">
+            <label for="zipCode">Zip Code (eg: 12345 or 12345-1234)</label><br>
+              <input type="text" name="zipCode" id="zipCode" class="form-control">
+              <span></span>
+            </div>
+
+            <div class="form-group">
+            <label for="phone">Phone Number</label><br>
+              <input type="tel" name="phone" id="phone" class="form-control">
+              <span></span>
+            </div>
+
+            <div class="form-group">
+            <label for="email">Email</label><br>
+              <input type="email" name="email" id="email" class="form-control">
+              <span></span>
+            </div>
+
+            
+            <h4>Build Your Pizza</h4>
+            <h5>Dough Type:</h5> 
+            <div class="form-group">
+              <label for="handTossed">
+                <input type="radio" name="doughType" id="handTossed" value="handTossed">
+                Hand Tossed
+              </label><br>
+              <label for="thinCrust">
+                <input type="radio" name="doughType" id="thinCrust" value="thinCrust">
+                Thin Crust 
+              </label><br>
+              <label for="newYorkStyle">
+                <input type="radio" name="doughType" id="newYorkStyle" value="newYorkStyle">
+                New York Style
+              </label><br>      
+              <label for="glutenFree">
+                <input type="radio" name="doughType" id="glutenFree" value="glutenFree">
+                Gluten Free
+              </label>
+            </div>
+
+            <div id="sizeBox" style='display: none;'>
+              <label for="sizeAndCost">Size and cost:</label><br>
+              <select name="sizeAndCost" id="sizeAndCost"></select><br>
+
+              <label for="cheeseOptions">Cheese options:</label><br>
+              <select name="cheeseOptions" id="cheeseOptions"></select><br>
+
+              <label for="sauceOptions">Sauce options:</label><br>
+              <select name="sauceOptions" id="sauceOptions"></select><br>
+
+              <h5>Toppings:</h5>
+              <div id="toppings"></div>
+            </div>
+        </div>
+       
+        <div class="col-lg-4">
+            <h3>Order Summary:</h3>
+            <div id="orderSummary">
+              <div id="doughOrder"></div>
+              <div id="sizeOrder"></div>
+              <div id="cheeseOrder"></div>
+              <div id="sauceOrder"></div>
+              <div id="toppingsOrder"></div>
+            </div>
+
+            <div id="sizeTotal" style="display: none;"></div>
+            <div id="cheeseTotal" style="display: none;"></div>
+            <div id="sauceTotal" style="display: none;"></div>
+            <div id="toppingsTotal" style="display: none;"></div>
+            <dix id="total"></div>
+
+            <button type="submit" class="btn btn-lg" style="margin: 20px 0 0 15px;" >Finish building pizza</button>
+        </div>
+        </form>
+      </div>
+      <footer class="footer" style="background: url('img/pizzaOven.jpeg') center no-repeat; height: 270px; text-align: center;">
+        <p>&copy; 2021 Company, Inc.</p>
+      </footer>
+   
+    </div> 
+  <script src="js/script.js"></script>
+  </body>
+</html>
